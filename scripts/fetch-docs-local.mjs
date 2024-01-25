@@ -80,4 +80,14 @@ const fetchDocs = async () => {
     const topics = await Promise.all(
       topicOrder.map(async unsanitizedTopicSlug => {
         const topicSlug = unsanitizedTopicSlug.toLowerCase()
+   
+        const topicDirectory = path.join(docsDirectory, `./${topicSlug}`)
+        const docSlugs = fs.readdirSync(topicDirectory)
   
+        const parsedDocs = await Promise.all(
+          docSlugs.map(async docFilename => {
+            try {
+              const rawDoc = fs.readFileSync(
+                `${docsDirectory}/${topicSlug.toLowerCase()}/${docFilename}`,
+                'utf8',
+              )
