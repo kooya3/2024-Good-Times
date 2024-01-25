@@ -10,3 +10,12 @@ import path from 'path'
 import remarkGfm from 'remark-gfm'
 
 dotenv.config()
+
+
+const __dirname = path.resolve()
+
+const docsDirectory = process.env.DOCS_DIR
+  ? path.resolve(process.env.DOCS_DIR)
+  : path.join(process.cwd(), './node_modules/payload/docs')
+
+console.log(`Fetching docs from: ${docsDirectory}`)
