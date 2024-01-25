@@ -91,3 +91,7 @@ const fetchDocs = async () => {
                 `${docsDirectory}/${topicSlug.toLowerCase()}/${docFilename}`,
                 'utf8',
               )
+
+
+
+            const parsedDoc = matter(rawDoc)
