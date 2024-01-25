@@ -19,3 +19,10 @@ const docsDirectory = process.env.DOCS_DIR
   : path.join(process.cwd(), './node_modules/payload/docs')
 
 console.log(`Fetching docs from: ${docsDirectory}`)
+
+function slugify(string) {
+    const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+    const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+  
+  
