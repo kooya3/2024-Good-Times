@@ -74,3 +74,10 @@ const topicOrder = [
       return { text, level, id: slugify(text) }
     })
   }
+
+
+const fetchDocs = async () => {
+    const topics = await Promise.all(
+      topicOrder.map(async unsanitizedTopicSlug => {
+        const topicSlug = unsanitizedTopicSlug.toLowerCase()
+  
