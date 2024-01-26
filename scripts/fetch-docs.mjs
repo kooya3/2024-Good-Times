@@ -61,3 +61,9 @@ const topicOrder = [
   'Integrations',
   'Cloud',
 ]
+
+const headers = {
+    Accept: 'application/vnd.github.v3+json.html',
+    Authorization: `token ${process.env.GITHUB_ACCESS_TOKEN}`,
+  }
+  
