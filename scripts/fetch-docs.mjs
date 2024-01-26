@@ -34,3 +34,30 @@ function slugify(string) {
     .replace(/^-+/, '') // Trim - from start of text
     .replace(/-+$/, '') // Trim - from end of text
 }
+
+const githubAPI = 'https://api.github.com/repos/payloadcms/payload'
+
+const topicOrder = [
+  'Getting-Started',
+  'Configuration',
+  'Database',
+  'Fields',
+  'Admin',
+  'Rich-Text',
+  'Live-Preview',
+  'Access-Control',
+  'Hooks',
+  'Authentication',
+  'Versions',
+  'Upload',
+  'GraphQL',
+  'REST-API',
+  'Local-API',
+  'Queries',
+  'Production',
+  'Email',
+  'TypeScript',
+  'Plugins',
+  'Integrations',
+  'Cloud',
+]
