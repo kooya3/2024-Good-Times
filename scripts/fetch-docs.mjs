@@ -67,3 +67,15 @@ const headers = {
     Authorization: `token ${process.env.GITHUB_ACCESS_TOKEN}`,
   }
   
+async function getHeadings(source) {
+    const headingLines = source.split('\n').filter(line => {
+      return line.match(/^#{1,3}\s.+/gm)
+    })
+  
+    return headingLines.map(raw => {
+      const text = raw.replace(/^###*\s/, '')
+      const level = raw.slice(0, 3) === '###' ? 3 : 2
+      return { text, level, id: slugify(text) }
+    })
+  }
+  
