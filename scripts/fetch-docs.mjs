@@ -7,3 +7,12 @@ import { serialize } from 'next-mdx-remote/serialize'
 import fetch from 'node-fetch'
 import path from 'path'
 import remarkGfm from 'remark-gfm'
+
+dotenv.config()
+
+const __dirname = path.resolve()
+
+const decodeBase64 = string => {
+  const buff = Buffer.from(string, 'base64')
+  return buff.toString('utf8')
+}
