@@ -16,3 +16,10 @@ const decodeBase64 = string => {
   const buff = Buffer.from(string, 'base64')
   return buff.toString('utf8')
 }
+
+function slugify(string) {
+    const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+    const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+  
+  
