@@ -22,4 +22,15 @@ export const checkRole = (allRoles: User['roles'], user: User): boolean => {
   }: {
   project: Project | null | undefined
   user: User | null | undefined
-})
+}): boolean => {
+    if (!user) return false
+  
+    if (checkRole(['admin'], user)) return true
+  
+    const userTeams = user?.teams || []
+  
+    const projectTeamID =
+      typeof project?.team === 'object' && project?.team !== null && 'id' in project?.team
+        ? project?.team.id
+        : project?.team
+  
