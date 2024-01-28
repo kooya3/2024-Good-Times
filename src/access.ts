@@ -15,3 +15,8 @@ export const checkRole = (allRoles: User['roles'], user: User): boolean => {
   
     return false
   }
+  
+  export const canUserMangeProject = ({
+    project,
+    user,
+  }
