@@ -31,3 +31,18 @@
         "@cloud/*": [
           "./src/app/cloud/*"
         ],
+        "@forms/*": [
+          "./src/forms/*"
+        ],
+        "@blocks/*": [
+          "./src/blocks/*"
+        ],
+        "@scss/*": [
+          "./src/css/*"
+        ],
+        "@root/*": [
+          "./src/*"
+        ],
+        "@providers": [
+          "./src/providers"
+        ],
