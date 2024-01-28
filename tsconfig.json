@@ -55,3 +55,12 @@
         "@utilities": [
           "./src/utilities"
         ],
+        "@utilities/*": [
+          "./src/utilities/*"
+        ],
+        "@types": [
+          "./src/payload-types.ts"
+        ],
+        "@graphics/*": [
+          "./src/graphics/*"
+        ],
