@@ -1,4 +1,4 @@
-import React from 'react'
+import type { Project, User } from './payload-cloud-types'
 
 function access() {
   return (
