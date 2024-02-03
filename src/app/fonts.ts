@@ -8,3 +8,9 @@ export const robotoMono = Roboto_Mono({
   subsets: ['latin'],
 })
 
+export const neueMontrealRegular = localFont({
+    src: '../fonts/PPNeueMontreal-Regular.woff2',
+    variable: '--font-body',
+    weight: '400',
+  })
+  
