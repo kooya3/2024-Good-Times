@@ -1,9 +1,10 @@
-import React from 'react'
+// eslint-disable-next-line camelcase
+import { Roboto_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 
-const fonts = () => {
-  return (
-    <div>fonts</div>
-  )
-}
+export const robotoMono = Roboto_Mono({
+  weight: ['400'],
+  variable: '--font-mono',
+  subsets: ['latin'],
+})
 
-export default fonts
