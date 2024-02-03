@@ -20,4 +20,9 @@ export const neueMontrealRegular = localFont({
     weight: 'bold',
   })
   
+  export const neueMontrealItalic = localFont({
+    src: '../fonts/PPNeueMontreal-Italic.woff2',
+    variable: '--font-body-italic',
+    style: 'italic',
+  })
   
