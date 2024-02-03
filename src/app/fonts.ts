@@ -14,3 +14,10 @@ export const neueMontrealRegular = localFont({
     weight: '400',
   })
   
+  export const neueMontrealBold = localFont({
+    src: '../fonts/PPNeueMontreal-Bold.woff2',
+    variable: '--font-body-bold',
+    weight: 'bold',
+  })
+  
+  
