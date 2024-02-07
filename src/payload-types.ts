@@ -46,3 +46,11 @@ export interface Config {
         }[];
         featuredImage: string | Media;
         layout?:
+        | (
+            | {
+                ctaFields: {
+                  richText: {
+                    [k: string]: unknown;
+                  }[];
+                  feature: 'none' | 'cpa';
+                  links?:
