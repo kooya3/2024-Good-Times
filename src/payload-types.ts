@@ -22,3 +22,10 @@ export interface Config {
         'payload-preferences': PayloadPreference;
         'payload-migrations': PayloadMigration;
       };
+      globals: {
+        footer: Footer;
+        'main-menu': MainMenu;
+        'top-bar': TopBar;
+        'feature-flags': FeatureFlag
+      };
+    }
