@@ -14,3 +14,11 @@ export interface Config {
         media: Media;
         pages: Page;
         posts: Post;
+        'reusable-content': ReusableContent;
+        users: User;
+        forms: Form;
+        'form-submissions': FormSubmission;
+        redirects: Redirect;
+        'payload-preferences': PayloadPreference;
+        'payload-migrations': PayloadMigration;
+      };
