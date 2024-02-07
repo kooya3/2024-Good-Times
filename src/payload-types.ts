@@ -10,4 +10,7 @@ export interface Config {
         announcements: Announcement;
         'case-studies': CaseStudy;
         'community-help': CommunityHelp;
-    
+        docs: Doc;
+        media: Media;
+        pages: Page;
+        posts: Post;
