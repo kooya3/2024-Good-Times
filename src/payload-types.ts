@@ -29,3 +29,13 @@ export interface Config {
         'feature-flags': FeatureFlag
       };
     }
+    export interface Announcement {
+        id: string;
+        name?: string | null;
+        content: {
+          [k: string]: unknown;
+        }[];
+        updatedAt: string;
+        createdAt: string;
+      }
+      
