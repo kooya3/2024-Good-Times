@@ -54,3 +54,12 @@ export interface Config {
                   }[];
                   feature: 'none' | 'cpa';
                   links?:
+                  | {
+                    link: {
+                      type?: ('reference' | 'custom') | null;
+                      newTab?: boolean | null;
+                      reference?:
+                        | ({
+                            relationTo: 'pages';
+                            value: string | Page;
+                          } | null)
