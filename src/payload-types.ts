@@ -7,4 +7,7 @@
  */
 export interface Config {
     collections: {
-  
+        announcements: Announcement;
+        'case-studies': CaseStudy;
+        'community-help': CommunityHelp;
+    
