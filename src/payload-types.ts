@@ -38,4 +38,11 @@ export interface Config {
         updatedAt: string;
         createdAt: string;
       }
-      
+      export interface CaseStudy {
+        id: string;
+        title: string;
+        introContent: {
+          [k: string]: unknown;
+        }[];
+        featuredImage: string | Media;
+        layout?:
