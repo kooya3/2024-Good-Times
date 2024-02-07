@@ -63,3 +63,17 @@ export interface Config {
                             relationTo: 'pages';
                             value: string | Page;
                           } | null)
+                          | ({
+                            relationTo: 'posts';
+                            value: string | Post;
+                          } | null)
+                        | ({
+                            relationTo: 'case-studies';
+                            value: string | CaseStudy;
+                          } | null);
+                      url?: string | null;
+                      label: string;
+                    };
+                    id?: string | null;
+                  }[]
+                | null;
