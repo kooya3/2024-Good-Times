@@ -144,3 +144,51 @@ export interface CaseStudy {
           blockName?: string | null;
           blockType: 'cardGrid';
         }
+        | {
+            caseStudiesHighlightFields: {
+              richText: {
+                [k: string]: unknown;
+              }[];
+              caseStudies: (string | CaseStudy)[];
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'caseStudiesHighlight';
+          }
+        | {
+            codeFeatureFields: {
+              disableBlockSpacing?: boolean | null;
+              disableIndent?: boolean | null;
+              heading: string;
+              richText: {
+                [k: string]: unknown;
+              }[];
+              enableLink?: boolean | null;
+              link?: {
+                type?: ('reference' | 'custom') | null;
+                newTab?: boolean | null;
+                reference?:
+                  | ({
+                      relationTo: 'pages';
+                      value: string | Page;
+                    } | null)
+                  | ({
+                      relationTo: 'posts';
+                      value: string | Post;
+                    } | null)
+                  | ({
+                      relationTo: 'case-studies';
+                      value: string | CaseStudy;
+                    } | null);
+                url?: string | null;
+                label: string;
+                appearance?: ('default' | 'primary' | 'secondary') | null;
+              };
+              language?: ('none' | 'js' | 'ts') | null;
+              label?: string | null;
+              code: string;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'codeFeature';
+          }
