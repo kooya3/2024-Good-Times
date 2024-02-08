@@ -112,3 +112,35 @@ export interface CaseStudy {
                     id?: string | null;
                   }[]
                 | null;
+
+              cards?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  enableLink?: boolean | null;
+                  link?: {
+                    type?: ('reference' | 'custom') | null;
+                    newTab?: boolean | null;
+                    reference?:
+                      | ({
+                          relationTo: 'pages';
+                          value: string | Page;
+                        } | null)
+                      | ({
+                          relationTo: 'posts';
+                          value: string | Post;
+                        } | null)
+                      | ({
+                          relationTo: 'case-studies';
+                          value: string | CaseStudy;
+                        } | null);
+                    url?: string | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+          };
+          id?: string | null;
+          blockName?: string | null;
+          blockType: 'cardGrid';
+        }
