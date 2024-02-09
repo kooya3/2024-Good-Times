@@ -451,3 +451,112 @@ export interface CaseStudy {
                         blockName?: string | null;
                         blockType: 'slider';
                       }
+                      | {
+                          stepsFields: {
+                            steps: {
+                              layout?:
+                                | (
+                                    | {
+                                        codeFeatureFields: {
+                                          disableBlockSpacing?: boolean | null;
+                                          disableIndent?: boolean | null;
+                                          heading: string;
+                                          richText: {
+                                            [k: string]: unknown;
+                                          }[];
+                                          enableLink?: boolean | null;
+                                          link?: {
+                                            type?: ('reference' | 'custom') | null;
+                                            newTab?: boolean | null;
+                                            reference?:
+                                              | ({
+                                                  relationTo: 'pages';
+                                                  value: string | Page;
+                                                } | null)
+                                              | ({
+                                                  relationTo: 'posts';
+                                                  value: string | Post;
+                                                } | null)
+                                              | ({
+                                                  relationTo: 'case-studies';
+                                                  value: string | CaseStudy;
+                                                } | null);
+                                            url?: string | null;
+                                            label: string;
+                                            appearance?: ('default' | 'primary' | 'secondary') | null;
+                                          };
+                                          language?: ('none' | 'js' | 'ts') | null;
+                                          label?: string | null;
+                                          code: string;
+                                        };
+                                        id?: string | null;
+                                        blockName?: string | null;
+                                        blockType: 'codeFeature';
+                                      }
+                                    | {
+                                        contentFields: {
+                                          useLeadingHeader?: boolean | null;
+                                          leadingHeader?:
+                                            | {
+                                                [k: string]: unknown;
+                                              }[]
+                                            | null;
+                                          layout?:
+                                            | ('oneColumn' | 'twoColumns' | 'twoThirdsOneThird' | 'halfAndHalf' | 'threeColumns')
+                                            | null;
+                                          columnOne: {
+                                            [k: string]: unknown;
+                                          }[];
+                                          columnTwo?:
+                                            | {
+                                                [k: string]: unknown;
+                                              }[]
+                                            | null;
+                                          columnThree?:
+                                            | {
+                                                [k: string]: unknown;
+                                              }[]
+                                            | null;
+                                        };
+                                        id?: string | null;
+                                        blockName?: string | null;
+                                        blockType: 'content';
+                                      }
+                                    | {
+                                        hoverHighlightsFields: {
+                                          richText: {
+                                            [k: string]: unknown;
+                                          }[];
+                                          addRowNumbers?: boolean | null;
+                                          highlights?:
+                                            | {
+                                                title: string;
+                                                description: string;
+                                                media: string | Media;
+                                                enableLink?: boolean | null;
+                                                link?: {
+                                                  type?: ('reference' | 'custom') | null;
+                                                  newTab?: boolean | null;
+                                                  reference?:
+                                                    | ({
+                                                        relationTo: 'pages';
+                                                        value: string | Page;
+                                                      } | null)
+                                                    | ({
+                                                        relationTo: 'posts';
+                                                        value: string | Post;
+                                                      } | null)
+                                                    | ({
+                                                        relationTo: 'case-studies';
+                                                        value: string | CaseStudy;
+                                                      } | null);
+                                                  url?: string | null;
+                                                };
+                                                id?: string | null;
+                                              }[]
+                                            | null;
+                                        };
+                                        id?: string | null;
+                                        blockName?: string | null;
+                                        blockType: 'hoverHighlights';
+                                      }
