@@ -323,3 +323,50 @@ export interface CaseStudy {
                 blockName?: string | null;
                 blockType: 'linkGrid';
               }
+              | {
+                  mediaBlockFields: {
+                    position?: ('default' | 'wide') | null;
+                    media: string | Media;
+                    caption?:
+                      | {
+                          [k: string]: unknown;
+                        }[]
+                      | null;
+                  };
+                  id?: string | null;
+                  blockName?: string | null;
+                  blockType: 'mediaBlock';
+                }
+              | {
+                  mediaContentFields: {
+                    alignment?: ('contentMedia' | 'mediaContent') | null;
+                    container?: boolean | null;
+                    richText: {
+                      [k: string]: unknown;
+                    }[];
+                    enableLink?: boolean | null;
+                    link?: {
+                      type?: ('reference' | 'custom') | null;
+                      newTab?: boolean | null;
+                      reference?:
+                        | ({
+                            relationTo: 'pages';
+                            value: string | Page;
+                          } | null)
+                        | ({
+                            relationTo: 'posts';
+                            value: string | Post;
+                          } | null)
+                        | ({
+                            relationTo: 'case-studies';
+                            value: string | CaseStudy;
+                          } | null);
+                      url?: string | null;
+                      label: string;
+                    };
+                    media: string | Media;
+                  };
+                  id?: string | null;
+                  blockName?: string | null;
+                  blockType: 'mediaContent';
+                }
