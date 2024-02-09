@@ -422,3 +422,32 @@ export interface CaseStudy {
                       blockName?: string | null;
                       blockType: 'reusableContentBlock';
                     }
+                    | {
+                        sliderFields: {
+                          useLeadingHeader?: boolean | null;
+                          leadingHeader?:
+                            | {
+                                [k: string]: unknown;
+                              }[]
+                            | null;
+                          sliderType: 'quoteSlider' | 'imageSlider';
+                          imageSlides?:
+                            | {
+                                image: string | Media;
+                                id?: string | null;
+                              }[]
+                            | null;
+                          quoteSlides?:
+                            | {
+                                richText: {
+                                  [k: string]: unknown;
+                                }[];
+                                quoteDate: string;
+                                id?: string | null;
+                              }[]
+                            | null;
+                        };
+                        id?: string | null;
+                        blockName?: string | null;
+                        blockType: 'slider';
+                      }
