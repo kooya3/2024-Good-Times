@@ -410,3 +410,7 @@ export interface CaseStudy {
                         | null;
                       disclaimer?: string | null;
                     };
+                    id?: string | null;
+                    blockName?: string | null;
+                    blockType: 'pricing';
+                  }
