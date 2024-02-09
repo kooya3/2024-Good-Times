@@ -370,3 +370,43 @@ export interface CaseStudy {
                   blockName?: string | null;
                   blockType: 'mediaContent';
                 }
+                | {
+                    pricingFields?: {
+                      plans?:
+                        | {
+                            name: string;
+                            hasPrice?: boolean | null;
+                            price?: string | null;
+                            title?: string | null;
+                            description?: string | null;
+                            enableLink?: boolean | null;
+                            link?: {
+                              type?: ('reference' | 'custom') | null;
+                              newTab?: boolean | null;
+                              reference?:
+                                | ({
+                                    relationTo: 'pages';
+                                    value: string | Page;
+                                  } | null)
+                                | ({
+                                    relationTo: 'posts';
+                                    value: string | Post;
+                                  } | null)
+                                | ({
+                                    relationTo: 'case-studies';
+                                    value: string | CaseStudy;
+                                  } | null);
+                              url?: string | null;
+                            };
+                            features?:
+                              | {
+                                  icon?: ('check' | 'x') | null;
+                                  feature?: string | null;
+                                  id?: string | null;
+                                }[]
+                              | null;
+                            id?: string | null;
+                          }[]
+                        | null;
+                      disclaimer?: string | null;
+                    };
