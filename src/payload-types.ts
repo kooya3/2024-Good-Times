@@ -414,3 +414,11 @@ export interface CaseStudy {
                     blockName?: string | null;
                     blockType: 'pricing';
                   }
+                  | {
+                      reusableContentBlockFields: {
+                        reusableContent: string | ReusableContent;
+                      };
+                      id?: string | null;
+                      blockName?: string | null;
+                      blockType: 'reusableContentBlock';
+                    }
