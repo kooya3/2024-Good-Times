@@ -635,3 +635,10 @@ export interface CaseStudy {
                                         url?: string | null;
                                         label: string;
                                       };
+                                      type?: ('code' | 'media') | null;
+                                      code?: string | null;
+                                      media?: string | Media | null;
+                                      id?: string | null;
+                                    }[]
+                                  | null;
+                              };
