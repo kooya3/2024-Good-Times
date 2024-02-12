@@ -603,3 +603,8 @@ export interface CaseStudy {
                                   | null;
                                 id?: string | null;
                               }[];
+                            };
+                            id?: string | null;
+                            blockName?: string | null;
+                            blockType: 'steps';
+                          }
