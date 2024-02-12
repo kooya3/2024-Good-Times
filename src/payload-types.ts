@@ -560,3 +560,20 @@ export interface CaseStudy {
                                         blockName?: string | null;
                                         blockType: 'hoverHighlights';
                                       }
+                                      | {
+                                          stickyHighlightsFields?: {
+                                            highlights?:
+                                              | {
+                                                  richText: {
+                                                    [k: string]: unknown;
+                                                  }[];
+                                                  enableLink?: boolean | null;
+                                                  link?: {
+                                                    type?: ('reference' | 'custom') | null;
+                                                    newTab?: boolean | null;
+                                                    reference?:
+                                                      | ({
+                                                          relationTo: 'pages';
+                                                          value: string | Page;
+                                                        } | null)
+                
