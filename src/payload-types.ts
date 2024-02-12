@@ -577,3 +577,21 @@ export interface CaseStudy {
                                                           value: string | Page;
                                                         } | null)
                 
+                                                        | ({
+                                                          relationTo: 'posts';
+                                                          value: string | Post;
+                                                        } | null)
+                                                      | ({
+                                                          relationTo: 'case-studies';
+                                                          value: string | CaseStudy;
+                                                        } | null);
+                                                    url?: string | null;
+                                                    label: string;
+                                                  };
+                                                  type?: ('code' | 'media') | null;
+                                                  code?: string | null;
+                                                  media?: string | Media | null;
+                                                  id?: string | null;
+                                                }[]
+                                              | null;
+                                          };
