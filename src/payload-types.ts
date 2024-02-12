@@ -648,3 +648,10 @@ export interface CaseStudy {
                             }
                         )[]
                       | null;
+                      slug?: string | null;
+                      url?: string | null;
+                      meta?: {
+                        title?: string | null;
+                        description?: string | null;
+                        image?: string | Media | null;
+                      };
