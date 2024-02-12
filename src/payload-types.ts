@@ -555,4 +555,8 @@ export interface CaseStudy {
                                                 id?: string | null;
                                               }[]
                                             | null;
-                                        }
+                                        };
+                                        id?: string | null;
+                                        blockName?: string | null;
+                                        blockType: 'hoverHighlights';
+                                      }
