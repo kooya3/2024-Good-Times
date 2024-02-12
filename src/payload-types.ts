@@ -595,3 +595,11 @@ export interface CaseStudy {
                                                 }[]
                                               | null;
                                           };
+                                          id?: string | null;
+                                          blockName?: string | null;
+                                          blockType: 'stickyHighlights';
+                                        }
+                                    )[]
+                                  | null;
+                                id?: string | null;
+                              }[];
