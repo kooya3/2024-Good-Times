@@ -608,3 +608,30 @@ export interface CaseStudy {
                             blockName?: string | null;
                             blockType: 'steps';
                           }
+                          | {
+                              stickyHighlightsFields?: {
+                                highlights?:
+                                  | {
+                                      richText: {
+                                        [k: string]: unknown;
+                                      }[];
+                                      enableLink?: boolean | null;
+                                      link?: {
+                                        type?: ('reference' | 'custom') | null;
+                                        newTab?: boolean | null;
+                                        reference?:
+                                          | ({
+                                              relationTo: 'pages';
+                                              value: string | Page;
+                                            } | null)
+                                          | ({
+                                              relationTo: 'posts';
+                                              value: string | Post;
+                                            } | null)
+                                          | ({
+                                              relationTo: 'case-studies';
+                                              value: string | CaseStudy;
+                                            } | null);
+                                        url?: string | null;
+                                        label: string;
+                                      };
