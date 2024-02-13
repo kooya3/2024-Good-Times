@@ -647,3 +647,4 @@ export interface CaseStudy {
                               blockType: 'stickyHighlights';
                             }
                         )[]
+                      | 
