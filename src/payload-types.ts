@@ -841,5 +841,38 @@ export interface CaseStudy {
                                       }[]
                                     | null;
                                 };
+                                id?: string | null;
+                                blockName?: string | null;
+                                blockType: 'cta';
+                              }
+                            | {
+                                cardGridFields: {
+                                  richText: {
+                                    [k: string]: unknown;
+                                  }[];
+                                  links?:
+                                    | {
+                                        link: {
+                                          type?: ('reference' | 'custom') | null;
+                                          newTab?: boolean | null;
+                                          reference?:
+                                            | ({
+                                                relationTo: 'pages';
+                                                value: string | Page;
+                                              } | null)
+                                            | ({
+                                                relationTo: 'posts';
+                                                value: string | Post;
+                                              } | null)
+                                            | ({
+                                                relationTo: 'case-studies';
+                                                value: string | CaseStudy;
+                                              } | null);
+                                          url?: string | null;
+                                          label: string;
+                                        };
+                                        id?: string | null;
+                                      }[]
+                                    | null;
                             
                     
