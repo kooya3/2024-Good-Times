@@ -655,3 +655,7 @@ export interface CaseStudy {
                         description?: string | null;
                         image?: string | Media | null;
                       };
+                      updatedAt: string;
+                      createdAt: string;
+                      _status?: ('draft' | 'published') | null;
+                    }
