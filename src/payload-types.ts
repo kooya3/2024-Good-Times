@@ -901,5 +901,22 @@ export interface CaseStudy {
                                         }[]
                                       | null;
                                   };
+                                  id?: string | null;
+                                  blockName?: string | null;
+                                  blockType: 'cardGrid';
+                                }
+                              | {
+                                  caseStudyCardFields?: {
+                                    pixels?: boolean | null;
+                                    cards?:
+                                      | {
+                                          richText: {
+                                            [k: string]: unknown;
+                                          }[];
+                                          caseStudy: string | CaseStudy;
+                                          id?: string | null;
+                                        }[]
+                                      | null;
+                                  };
                             
                     
