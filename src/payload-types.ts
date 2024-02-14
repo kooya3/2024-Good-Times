@@ -781,5 +781,33 @@ export interface CaseStudy {
                                     label: string;
                                     appearance?: ('primary' | 'secondary') | null;
                                   };
+                                  id?: string | null;
+                                }[]
+                              | null;
+                            media?: string | Media | null;
+                            mediaWidth?: ('normal' | 'wide') | null;
+                            adjectives?:
+                              | {
+                                  adjective: string;
+                                  id?: string | null;
+                                }[]
+                              | null;
+                            form?: (string | null) | Form;
+                            logoGroup?: {
+                              label?: string | null;
+                              logos?:
+                                | {
+                                    logo: string | Media;
+                                    id?: string | null;
+                                  }[]
+                                | null;
+                            };
+                            carousel?:
+                              | {
+                                  image: string | Media;
+                                  id?: string | null;
+                                }[]
+                              | null;
+                          };
                             
                     
