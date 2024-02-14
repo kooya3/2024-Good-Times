@@ -674,3 +674,29 @@ export interface CaseStudy {
                       height?: number | null;
                     }
                     
+
+                    export interface Page {
+                      id: string;
+                      title: string;
+                      fullTitle?: string | null;
+                      hero: {
+                        type: 'default' | 'contentMedia' | 'form' | 'home' | 'livestream' | 'centeredCarousel';
+                        livestream?: {
+                          id?: string | null;
+                          date: string;
+                          hideBreadcrumbs?: boolean | null;
+                          richText?:
+                            | {
+                                [k: string]: unknown;
+                              }[]
+                            | null;
+                          guests?:
+                            | {
+                                name?: string | null;
+                                link?: string | null;
+                                image?: string | Media | null;
+                                id?: string | null;
+                              }[]
+                            | null;
+                        };
+                    
