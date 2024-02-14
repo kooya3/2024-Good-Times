@@ -1015,5 +1015,9 @@ export interface CaseStudy {
                                                 }[]
                                               | null;
                                           };
+                                          id?: string | null;
+                                          blockName?: string | null;
+                                          blockType: 'contentGrid';
+                                        }
                             
                     
