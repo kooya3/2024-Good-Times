@@ -897,5 +897,9 @@ export interface CaseStudy {
                                                 } | null);
                                             url?: string | null;
                                           };
+                                          id?: string | null;
+                                        }[]
+                                      | null;
+                                  };
                             
                     
