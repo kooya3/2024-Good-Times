@@ -997,5 +997,23 @@ export interface CaseStudy {
                                         blockName?: string | null;
                                         blockType: 'content';
                                       }
+                                      | {
+                                          contentGridFields?: {
+                                            forceDarkBackground?: boolean | null;
+                                            useLeadingHeader?: boolean | null;
+                                            leadingHeader?:
+                                              | {
+                                                  [k: string]: unknown;
+                                                }[]
+                                              | null;
+                                            cells?:
+                                              | {
+                                                  content: {
+                                                    [k: string]: unknown;
+                                                  }[];
+                                                  id?: string | null;
+                                                }[]
+                                              | null;
+                                          };
                             
                     
