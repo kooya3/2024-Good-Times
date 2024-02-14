@@ -966,5 +966,9 @@ export interface CaseStudy {
                                       label?: string | null;
                                       code: string;
                                     };
+                                    id?: string | null;
+                                    blockName?: string | null;
+                                    blockType: 'codeFeature';
+                                  }
                             
                     
