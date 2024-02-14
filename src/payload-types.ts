@@ -758,5 +758,28 @@ export interface CaseStudy {
                                 };
                                 id?: string | null;
                               }[]
+                              | null;
+                            buttons?:
+                              | {
+                                  link: {
+                                    type?: ('reference' | 'custom') | null;
+                                    newTab?: boolean | null;
+                                    reference?:
+                                      | ({
+                                          relationTo: 'pages';
+                                          value: string | Page;
+                                        } | null)
+                                      | ({
+                                          relationTo: 'posts';
+                                          value: string | Post;
+                                        } | null)
+                                      | ({
+                                          relationTo: 'case-studies';
+                                          value: string | CaseStudy;
+                                        } | null);
+                                    url?: string | null;
+                                    label: string;
+                                    appearance?: ('primary' | 'secondary') | null;
+                                  };
                             
                     
