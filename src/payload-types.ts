@@ -987,5 +987,15 @@ export interface CaseStudy {
                                               [k: string]: unknown;
                                             }[]
                                           | null;
+                                          columnThree?:
+                                            | {
+                                                [k: string]: unknown;
+                                              }[]
+                                            | null;
+                                        };
+                                        id?: string | null;
+                                        blockName?: string | null;
+                                        blockType: 'content';
+                                      }
                             
                     
