@@ -918,5 +918,20 @@ export interface CaseStudy {
                                         }[]
                                       | null;
                                   };
+                                  id?: string | null;
+                                  blockName?: string | null;
+                                  blockType: 'caseStudyCards';
+                                }
+                              | {
+                                  caseStudiesHighlightFields: {
+                                    richText: {
+                                      [k: string]: unknown;
+                                    }[];
+                                    caseStudies: (string | CaseStudy)[];
+                                  };
+                                  id?: string | null;
+                                  blockName?: string | null;
+                                  blockType: 'caseStudiesHighlight';
+                                }
                             
                     
