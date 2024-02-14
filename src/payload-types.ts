@@ -962,5 +962,9 @@ export interface CaseStudy {
                                         label: string;
                                         appearance?: ('default' | 'primary' | 'secondary') | null;
                                       };
+                                      language?: ('none' | 'js' | 'ts') | null;
+                                      label?: string | null;
+                                      code: string;
+                                    };
                             
                     
